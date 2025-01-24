@@ -1,14 +1,21 @@
 .feeling {
-  width: 100%;
-  height: 100%;
-  border: 5px solid rgba(0,0,0,.25);
+  width: 25vw;
+  height: 25vw;
+  /* border: 5px solid rgba(0,0,0,.25); */
   text-align: center;
   font-size: 1.5rem;
   padding: 1rem;
   color: var(--text);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
+@media (min-width: 600px) {
+  .feeling {
+    width: 25%;
+    height: 25%;
+    font-size: 1rem;
+  }
+}
 .feeling[type="button"] {
   cursor: pointer;
   transition: background-color .25s;
@@ -27,9 +34,9 @@
   padding: .5rem
 }
 
-.feeling.secondary {
+/* .feeling.secondary {
   max-width: 40px;
-}
+} */
 
 .excited {
   background-color: var(--feeling-excited);

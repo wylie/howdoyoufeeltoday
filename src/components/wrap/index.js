@@ -9,7 +9,7 @@ const Wrap = () => {
   return (
     <div className="wrap">
       <FeelingsProvider>
-        <Heading>How Do You Feel?</Heading>
+        <Heading>How Do You Feel Today?</Heading>
         <Feelings />
         <Heading>Previous Feels</Heading>
         <FeelingsPast />

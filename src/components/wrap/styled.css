@@ -1,12 +1,13 @@
 .wrap {
   width: 100%;
   max-width: 600px;
-  padding: 2rem;
+  /* padding: .5rem; */
   margin: auto;
 }
 
 @media (min-width: 600px) {
   .wrap {
+    padding: 2rem;
     width: 75%;
   }
 }
