@@ -2,7 +2,7 @@
   "name": "ifeelblank",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wylie.github.io/ifeelblank",
+  "homepage": "https://wylie.github.io/howdoyoufeeltoday",
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/react": "^16.0.1",
