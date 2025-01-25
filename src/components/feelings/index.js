@@ -5,7 +5,7 @@ import "./styled.css";
 
 const Feelings = () => {
   const { setFeelings } = useContext(FeelingsContext);
-  const feels = ["excited", "tender", "scared", "angry", "sad", "happy"];
+  const feels = ["trust", "fear", "surprise", "sadness", "disgust", "anger", "anticipation", "joy"];
 
   const handleClick = async (kind) => {
     try {

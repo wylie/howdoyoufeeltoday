@@ -13,6 +13,23 @@
   --feeling-sad-hover: #4978b8;
   --feeling-happy: #3ea34a;
   --feeling-happy-hover: #389343;
+
+  --feeling-trust: #77b74c;
+  --feeling-trust-hover: #659d3f;
+  --feeling-fear: #0199cb;
+  --feeling-fear-hover: #017ca4;
+  --feeling-surprise: #02ccff;
+  --feeling-surprise-hover: #00aeda;
+  --feeling-sadness: #595afe;
+  --feeling-sadness-hover: #3233fe;
+  --feeling-disgust: #cb02cd;
+  --feeling-disgust-hover: #a502a6;
+  --feeling-anger: #fe0000;
+  --feeling-anger-hover: #d70000;
+  --feeling-anticipation: #ff6602;
+  --feeling-anticipation-hover: #da5600;
+  --feeling-joy: #ecb816;
+  --feeling-joy-hover: #ca9d10;
 }
 
 * {

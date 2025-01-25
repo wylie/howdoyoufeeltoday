@@ -1,7 +1,19 @@
 .heading {
   margin: 1rem 0;
   border-bottom: 3px solid var(--text);
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   font-weight: normal;
   text-align: center;
+  transition: all 0.3s;
+}
+@media screen and (min-width: 400px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .heading {
+    font-size: 3rem;
+  }
 }

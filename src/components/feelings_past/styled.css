@@ -7,24 +7,36 @@
 
 .feeling-container {
   position: relative;
-  display: inline-block;
 }
 
 .tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   visibility: hidden;
-  width: 250px; /* Increased width by 50px */
-  background-color: black;
+  width: fit-content;
+  background-color: rgba(0,0,0,0.6);
   color: #fff;
-  text-align: center;
   border-radius: 6px;
-  padding: 5px;
+  padding: .5rem;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Position the tooltip above the text */
-  left: 50%;
-  margin-left: -125px; /* Adjusted margin to center the tooltip */
+  bottom: 110%; /* Position the tooltip above the text */
+  left: -100%;
   opacity: 0;
   transition: opacity 0.3s;
+  cursor: default;
+}
+.tooltip p {
+  margin: 0;
+  white-space: nowrap;
+  font-size: .8rem;
+}
+.tooltip p:first-child {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  text-transform: capitalize;
 }
 
 .feeling-container:hover .tooltip {

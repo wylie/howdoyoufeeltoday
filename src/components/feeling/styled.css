@@ -7,11 +7,11 @@
   padding: 1rem;
   color: var(--text);
   border-radius: 10px;
+  transition: background-color .25s;
 }
 
 .feeling[type="button"] {
   cursor: pointer;
-  transition: background-color .25s;
 }
 
 .feeling[type="button"]:active {
@@ -19,17 +19,58 @@
 }
 
 .feeling.primary {
-  width: 100%;
-  height: 100%;
-  border: 5px solid rgba(0,0,0,.25);
-  text-align: center;
-  font-size: 1.5rem;
   padding: .5rem
 }
 
-.feeling.secondary {
-  max-width: 40px;
+.trust {
+  background-color: var(--feeling-trust);
 }
+.trust[type="button"]:hover {
+  background-color: var(--feeling-trust-hover);
+}
+.fear {
+  background-color: var(--feeling-fear);
+}
+.fear[type="button"]:hover {
+  background-color: var(--feeling-fear-hover);
+}
+.surprise {
+  background-color: var(--feeling-surprise);
+}
+.surprise[type="button"]:hover {
+  background-color: var(--feeling-surprise-hover);
+}
+.sadness {
+  background-color: var(--feeling-sadness);
+}
+.sadness[type="button"]:hover {
+  background-color: var(--feeling-sadness-hover);
+}
+.disgust {
+  background-color: var(--feeling-disgust);
+}
+.disgust[type="button"]:hover {
+  background-color: var(--feeling-disgust-hover);
+}
+.anger {
+  background-color: var(--feeling-anger);
+}
+.anger[type="button"]:hover {
+  background-color: var(--feeling-anger-hover);
+}
+.anticipation {
+  background-color: var(--feeling-anticipation);
+}
+.anticipation[type="button"]:hover {
+  background-color: var(--feeling-anticipation-hover);
+}
+.joy {
+  background-color: var(--feeling-joy);
+}
+.joy[type="button"]:hover {
+  background-color: var(--feeling-joy-hover);
+}
+
 
 .excited {
   background-color: var(--feeling-excited);
@@ -71,7 +112,6 @@
 .happy {
   background-color: var(--feeling-happy);
 }
-
 .happy[type="button"]:hover {
   background-color: var(--feeling-happy-hover);
 }

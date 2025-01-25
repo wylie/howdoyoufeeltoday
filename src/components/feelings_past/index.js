@@ -25,7 +25,7 @@ const parseDateString = (dateString) => {
 const formatDate = (date) => {
   const options = { 
     year: 'numeric', 
-    month: 'long', 
+    month: 'numeric', 
     day: 'numeric', 
     hour: 'numeric', 
     minute: 'numeric', 
@@ -45,7 +45,14 @@ const FeelingsPast = () => {
           <div className="feeling-container" key={feeling.id}>
             <Feeling theme={"secondary"} kind={feeling.name} />
             <div className="tooltip">
-              {feeling.date ? `${formatDate(parsedDate)}, Feeling: ${feeling.name}` : feeling.name}
+              {feeling.date ? (
+                <>
+                  <p>{feeling.name}</p>
+                  <p>{formatDate(parsedDate)}</p>
+                </>
+              ) : (
+                feeling.name
+              )}
             </div>
           </div>
         );
