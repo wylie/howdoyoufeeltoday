@@ -45,3 +45,238 @@ body {
   color: var(--text);
   background: var(--background);
 }
+
+.wrap {
+  padding: 0;
+  margin: auto;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+@media (min-width: 600px) {
+  .wrap {
+    max-width: 600px;
+    padding: 1rem;
+  }
+}
+
+.heading {
+  margin: 1rem 0;
+  border-bottom: 3px solid var(--text);
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 400px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+.feels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5rem;
+  padding: 0 .5rem;
+  transition: all 0.2s;
+}
+
+@media (min-width:750px) {
+  .feels {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 0;
+  }
+}
+
+.feelings_past {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: .5rem;
+  justify-content: center;
+}
+
+.feeling-container {
+  position: relative;
+}
+
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  width: fit-content;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  border-radius: 6px;
+  padding: .5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%; /* Position the tooltip above the text */
+  left: -100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: default;
+}
+
+.tooltip p {
+  margin: 0;
+  white-space: nowrap;
+  font-size: .8rem;
+}
+
+.tooltip p:first-child {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  text-transform: capitalize;
+}
+
+.feeling-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.feeling {
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgba(0,0,0,.25);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: var(--text);
+  border-radius: 10px;
+  transition: background-color .25s;
+}
+
+.feeling[type="button"] {
+  cursor: pointer;
+}
+
+.feeling[type="button"]:active {
+  transform: scale(0.95);
+}
+
+.feeling.primary {
+  padding: .5rem
+}
+
+.trust {
+  background-color: var(--feeling-trust);
+}
+
+.trust[type="button"]:hover {
+  background-color: var(--feeling-trust-hover);
+}
+
+.fear {
+  background-color: var(--feeling-fear);
+}
+
+.fear[type="button"]:hover {
+  background-color: var(--feeling-fear-hover);
+}
+
+.surprise {
+  background-color: var(--feeling-surprise);
+}
+
+.surprise[type="button"]:hover {
+  background-color: var(--feeling-surprise-hover);
+}
+
+.sadness {
+  background-color: var(--feeling-sadness);
+}
+
+.sadness[type="button"]:hover {
+  background-color: var(--feeling-sadness-hover);
+}
+
+.disgust {
+  background-color: var(--feeling-disgust);
+}
+
+.disgust[type="button"]:hover {
+  background-color: var(--feeling-disgust-hover);
+}
+
+.anger {
+  background-color: var(--feeling-anger);
+}
+
+.anger[type="button"]:hover {
+  background-color: var(--feeling-anger-hover);
+}
+
+.anticipation {
+  background-color: var(--feeling-anticipation);
+}
+
+.anticipation[type="button"]:hover {
+  background-color: var(--feeling-anticipation-hover);
+}
+
+.joy {
+  background-color: var(--feeling-joy);
+}
+
+.joy[type="button"]:hover {
+  background-color: var(--feeling-joy-hover);
+}
+
+.excited {
+  background-color: var(--feeling-excited);
+}
+
+.excited[type="button"]:hover {
+  background-color: var(--feeling-excited-hover);
+}
+
+.tender {
+  background-color: var(--feeling-tender);
+}
+
+.tender[type="button"]:hover {
+  background-color: var(--feeling-tender-hover);
+}
+
+.scared {
+  background-color: var(--feeling-scared);
+}
+
+.scared[type="button"]:hover {
+  background-color: var(--feeling-scared-hover);
+}
+
+.angry {
+  background-color: var(--feeling-angry);
+}
+
+.angry[type="button"]:hover {
+  background-color: var(--feeling-angry-hover);
+}
+
+.sad {
+  background-color: var(--feeling-sad);
+}
+
+.sad[type="button"]:hover {
+  background-color: var(--feeling-sad-hover);
+}
+
+.happy {
+  background-color: var(--feeling-happy);
+}
+
+.happy[type="button"]:hover {
+  background-color: var(--feeling-happy-hover);
+}
