@@ -1,6 +1,8 @@
 :root {
   --text: #fff;
   --background: #89cddc;
+
+  /* old colors */
   --feeling-excited: #ec7b28;
   --feeling-excited-hover: #d46f24;
   --feeling-tender: #f014e8;
@@ -13,7 +15,7 @@
   --feeling-sad-hover: #4978b8;
   --feeling-happy: #3ea34a;
   --feeling-happy-hover: #389343;
-
+  /* new colors */
   --feeling-trust: #77b74c;
   --feeling-trust-hover: #659d3f;
   --feeling-fear: #0199cb;
@@ -53,13 +55,6 @@ body {
   transition: all 0.3s;
 }
 
-@media (min-width: 600px) {
-  .wrap {
-    max-width: 600px;
-    padding: 1rem;
-  }
-}
-
 .heading {
   margin: 1rem 0;
   border-bottom: 3px solid var(--text);
@@ -69,32 +64,12 @@ body {
   transition: all 0.3s;
 }
 
-@media screen and (min-width: 400px) {
-  .heading {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 540px) {
-  .heading {
-    font-size: 3rem;
-  }
-}
-
 .feels {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: .5rem;
   padding: 0 .5rem;
   transition: all 0.2s;
-}
-
-@media (min-width:750px) {
-  .feels {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    padding: 0;
-  }
 }
 
 .feelings_past {
@@ -279,4 +254,33 @@ body {
 
 .happy[type="button"]:hover {
   background-color: var(--feeling-happy-hover);
+}
+
+/* Consolidated media queries */
+
+@media screen and (min-width: 400px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .wrap {
+    max-width: 600px;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .feels {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 0;
+  }
 }
