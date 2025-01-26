@@ -1,10 +1,13 @@
 import React, { createContext, useState, useEffect } from "react";
 
+// Create a context for feelings
 const FeelingsContext = createContext();
 
 const App = () => {
+  // State to store feelings
   const [feelings, setFeelings] = useState([]);
 
+  // Fetch feelings from the API on component mount
   useEffect(() => {
     const fetchFeelings = async () => {
       try {
@@ -29,20 +32,24 @@ const App = () => {
     fetchFeelings();
   }, []);
 
-  const Feeling = ({ element = "div", theme, kind, children, ...feelingprops }) => {
+  // Component to render a feeling
+  const Feeling = ({ element = "div", kind, children, ...feelingprops }) => {
     const Element = element;
     return (
       <Element
-        className={`feeling ${kind} ${theme}`}
+        className={`feeling ${kind} ${children ? null : 'padding'}`}
         children={children}
+        styles={children ? null : '1rem'}
         {...feelingprops}
       />
     );
   };
 
+  // Component to render buttons for each feeling
   const Feelings = () => {
     const feels = ["trust", "fear", "surprise", "sadness", "disgust", "anger", "anticipation", "joy"];
 
+    // Handle click event to add a new feeling
     const handleClick = async (kind) => {
       try {
         const getResponse = await fetch('https://api.jsonbin.io/v3/b/671cdf95e41b4d34e4491863/latest', {
@@ -94,12 +101,11 @@ const App = () => {
     };
 
     return (
-      <div className="feels">
+      <div className="choose-feeling">
         {feels.map((index) => (
           <Feeling 
             element="button" 
             type="button" 
-            theme={"primary"} 
             kind={index} 
             key={index} 
             children={index} 
@@ -110,6 +116,7 @@ const App = () => {
     )
   };
 
+  // Parse date string to Date object
   const parseDateString = (dateString) => {
     if (dateString.includes('T')) {
       return new Date(dateString);
@@ -128,6 +135,7 @@ const App = () => {
     return date;
   };
 
+  // Format Date object to readable string
   const formatDate = (date) => {
     const options = { 
       year: 'numeric', 
@@ -140,14 +148,15 @@ const App = () => {
     return date.toLocaleString('en-US', options);
   };
 
+  // Component to render past feelings
   const FeelingsPast = () => {
     return (
-      <div className="feelings_past" data-element="list">
+      <div className="past-feelings" data-element="list">
         {feelings.map((feeling) => {
           const parsedDate = parseDateString(feeling.date);
           return (
-            <div className="feeling-container" key={feeling.id}>
-              <Feeling theme={"secondary"} kind={feeling.name} />
+            <div className="past-feelings-container" key={feeling.id}>
+              <Feeling kind={feeling.name} />
               <div className="tooltip">
                 {feeling.date ? (
                   <>
